@@ -189,6 +189,10 @@
     .btn-ghost:hover {
       background:#f3f4f6;
     }
+    .btn-sm {
+      padding:0.3rem 0.8rem;
+      font-size:0.8rem;
+    }
     .btn[disabled] {
       opacity:0.45;
       cursor:not-allowed;
@@ -350,6 +354,7 @@
       display:flex;
       flex-wrap:wrap;
       gap:0.3rem;
+      align-items:center;
     }
     .badge {
       padding:0.15rem 0.55rem;
@@ -366,6 +371,16 @@
       border-color:#c7d2fe;
       background:#eef2ff;
       color:#4338ca;
+    }
+    .badge-timer-ending {
+      background:#fef3c7;
+      border-color:#facc15;
+      color:#92400e;
+    }
+    .badge-timer-done {
+      background:#fee2e2;
+      border-color:#ef4444;
+      color:#991b1b;
     }
 
     .question-text {
@@ -454,6 +469,56 @@
     .result-text {
       font-size:0.9rem;
       color:#4b5563;
+      margin:0.2rem 0;
+    }
+    .result-leader {
+      margin-top:1rem;
+      display:grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap:1rem;
+      text-align:left;
+    }
+    @media (max-width: 800px) {
+      .result-leader {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .leader-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.5rem;
+      align-items:center;
+      margin-top:0.3rem;
+      margin-bottom:0.3rem;
+    }
+    #leaderName {
+      flex:1 1 180px;
+      min-width:160px;
+      padding:0.4rem 0.6rem;
+      border-radius:999px;
+      border:1px solid #d1d5db;
+      font-size:0.9rem;
+    }
+    .result-text.small-note {
+      font-size:0.8rem;
+      color:#6b7280;
+    }
+    .leaderboard-table {
+      width:100%;
+      border-collapse:collapse;
+      font-size:0.82rem;
+    }
+    .leaderboard-table th,
+    .leaderboard-table td {
+      border:1px solid #e5e7eb;
+      padding:0.25rem 0.35rem;
+      text-align:left;
+    }
+    .leaderboard-table th {
+      background:#eff6ff;
+    }
+    .leaderboard-table tr:nth-child(even) {
+      background:#f9fafb;
     }
 
     .fact-layout {
@@ -709,6 +774,7 @@
         <div class="quiz-meta">
           <div id="quizMetaLeft"></div>
           <div class="quiz-badges">
+            <span class="badge" id="quizTimerBadge">⏱ Temps restant : 03:00</span>
             <span class="badge"><span>✅</span><span id="quizScoreBadge">0 bonne réponse</span></span>
             <span class="badge badge-strong"><span>📊</span><span id="quizQuestionIndex">Question 1 / 1</span></span>
           </div>
@@ -755,6 +821,42 @@
             <button class="btn btn-secondary" id="btnGoFactsFromResult">
               💡 Passer en mode “Le saviez-vous ?”
             </button>
+            <button class="btn btn-secondary" id="btnSendResultEmail">
+              📧 Envoyer mon score par mail
+            </button>
+          </div>
+        </div>
+
+        <div class="result-leader">
+          <div>
+            <p class="result-text"><strong>Enregistrer votre score pour le classement (sur cet appareil) :</strong></p>
+            <div class="leader-row">
+              <input type="text" id="leaderName" placeholder="Votre nom ou nom d’équipe">
+              <button class="btn btn-secondary btn-sm" id="btnSaveScore">💾 Enregistrer mon score</button>
+              <button class="btn btn-ghost btn-sm" id="btnClearScores">🧹 Vider le classement</button>
+            </div>
+            <p class="result-text small-note">
+              Les scores sont enregistrés localement dans ce navigateur uniquement
+              (utile pour projeter un classement en fin de session).
+            </p>
+          </div>
+          <div>
+            <p class="result-text"><strong>Classement des participants :</strong></p>
+            <table class="leaderboard-table">
+              <thead>
+                <tr>
+                  <th>Rang</th>
+                  <th>Nom / équipe</th>
+                  <th>Score</th>
+                  <th>%</th>
+                  <th>Périmètre</th>
+                </tr>
+              </thead>
+              <tbody id="leaderboardBody"></tbody>
+            </table>
+            <p class="result-text small-note" id="leaderboardEmpty">
+              Aucun score enregistré pour le moment.
+            </p>
           </div>
         </div>
       </section>
@@ -800,6 +902,12 @@
   </div>
 
   <script>
+    // Adresse mail de l'organisateur (facultatif).
+    // Si vous laissez une chaîne vide, le participant devra saisir l'adresse.
+    const ORGANIZER_EMAIL = "";
+
+    const LEADERBOARD_KEY = "segurQuizLeaderboard_v1";
+
     const SERVICES = {
       DMP: { label: "Service socle 1 – DMP", icon: "📂" },
       MES: { label: "Service socle 2 – Mon espace santé", icon: "🏠" },
@@ -1066,7 +1174,6 @@
       }
     ];
 
-    // VUES
     const viewHome        = document.getElementById("view-home");
     const viewQuizSelect  = document.getElementById("view-quiz-select");
     const viewQuiz        = document.getElementById("view-quiz");
@@ -1092,17 +1199,22 @@
       showView(viewHome);
     });
 
-    // QUIZ
+    // QUIZ + TIMER + SCORE + CLASSEMENT
     let quizServiceFilter = "ALL";
     let quizActive = [];
     let quizIndex = 0;
     let quizScore = 0;
+
+    let quizTimerSeconds = 0;
+    let quizTimerInterval = null;
+    let quizTimeUp = false;
 
     const quizBreadcrumb = document.getElementById("quizBreadcrumb");
     const quizProgress   = document.getElementById("quizProgress");
     const quizMetaLeft   = document.getElementById("quizMetaLeft");
     const quizScoreBadge = document.getElementById("quizScoreBadge");
     const quizQuestionIndex = document.getElementById("quizQuestionIndex");
+    const quizTimerBadge = document.getElementById("quizTimerBadge");
 
     const quizQuestionText  = document.getElementById("quizQuestionText");
     const quizQuestionExtra = document.getElementById("quizQuestionExtra");
@@ -1117,6 +1229,7 @@
 
     btnBackToQuizSelect.addEventListener("click", () => {
       showView(viewQuizSelect);
+      stopQuizTimer();
     });
 
     function shuffle(array) {
@@ -1139,8 +1252,64 @@
       btnQuizSeeResults.classList.add("hidden");
       btnQuizNext.classList.add("hidden");
       btnQuizValidate.disabled = false;
+      quizTimeUp = false;
+      resetTimerBadge();
+      startQuizTimer(180); // 3 minutes
       showView(viewQuiz);
       renderQuizQuestion();
+    }
+
+    function resetTimerBadge() {
+      quizTimerBadge.classList.remove("badge-timer-ending", "badge-timer-done");
+      quizTimerBadge.textContent = "⏱ Temps restant : 03:00";
+    }
+
+    function startQuizTimer(seconds) {
+      stopQuizTimer();
+      quizTimerSeconds = seconds;
+      updateTimerBadge();
+      quizTimerInterval = setInterval(() => {
+        quizTimerSeconds -= 1;
+        if (quizTimerSeconds <= 0) {
+          quizTimerSeconds = 0;
+          updateTimerBadge();
+          stopQuizTimer();
+          handleTimeUp();
+        } else {
+          updateTimerBadge();
+        }
+      }, 1000);
+    }
+
+    function stopQuizTimer() {
+      if (quizTimerInterval) {
+        clearInterval(quizTimerInterval);
+        quizTimerInterval = null;
+      }
+    }
+
+    function updateTimerBadge() {
+      const mm = String(Math.floor(quizTimerSeconds / 60)).padStart(2,"0");
+      const ss = String(quizTimerSeconds % 60).padStart(2,"0");
+      quizTimerBadge.textContent = "⏱ Temps restant : " + mm + ":" + ss;
+      quizTimerBadge.classList.remove("badge-timer-ending", "badge-timer-done");
+      if (quizTimerSeconds <= 30 && quizTimerSeconds > 0) {
+        quizTimerBadge.classList.add("badge-timer-ending");
+      }
+      if (quizTimerSeconds === 0) {
+        quizTimerBadge.classList.add("badge-timer-done");
+        quizTimerBadge.textContent = "⏱ Temps écoulé";
+      }
+    }
+
+    function handleTimeUp() {
+      if (quizTimeUp) return;
+      quizTimeUp = true;
+      // Si on n'est pas déjà sur l'écran de résultat, on y va
+      if (viewQuizResult.classList.contains("hidden")) {
+        alert("⏰ Temps écoulé ! Nous affichons votre score sur les questions répondues.");
+        showQuizResults();
+      }
     }
 
     function renderQuizQuestion() {
@@ -1218,6 +1387,10 @@
     }
 
     function validateQuizQuestion() {
+      if (quizTimeUp) {
+        alert("Le temps est écoulé. Le quiz est terminé.");
+        return;
+      }
       const q = quizActive[quizIndex];
       const selected = getSelectedOptionIndexes();
       if (!selected.length) {
@@ -1271,10 +1444,20 @@
       }
     }
 
+    function getPerimeterLabel() {
+      if (quizServiceFilter === "ALL") {
+        return "Tous les services socles";
+      }
+      const s = SERVICES[quizServiceFilter];
+      return s ? s.label : "Service inconnu";
+    }
+
     function showQuizResults() {
-      const total = quizActive.length;
-      const pct = Math.round((quizScore / total) * 100);
+      stopQuizTimer();
       showView(viewQuizResult);
+
+      const total = quizActive.length;
+      const pct = total > 0 ? Math.round((quizScore / total) * 100) : 0;
 
       const resultScore = document.getElementById("resultScore");
       const resultBadges = document.getElementById("resultBadges");
@@ -1311,6 +1494,9 @@
 
       resultMessage.textContent =
         "Vous pouvez relancer un quiz, changer de service socle ou passer en mode “Le saviez-vous ?” pour revoir les notions clés de façon plus tranquille.";
+
+      // Met à jour l'affichage du classement
+      renderLeaderboard();
     }
 
     btnQuizValidate.addEventListener("click", validateQuizQuestion);
@@ -1333,6 +1519,147 @@
         const service = card.getAttribute("data-service");
         startQuiz(service || "ALL");
       });
+    });
+
+    // LEADERBOARD LOCAL
+    function loadLeaderboard() {
+      try {
+        const raw = localStorage.getItem(LEADERBOARD_KEY);
+        if (!raw) return [];
+        const data = JSON.parse(raw);
+        return Array.isArray(data) ? data : [];
+      } catch(e) {
+        return [];
+      }
+    }
+
+    function saveLeaderboard(list) {
+      try {
+        localStorage.setItem(LEADERBOARD_KEY, JSON.stringify(list));
+      } catch(e) {
+        console.error("Impossible d’enregistrer le classement :", e);
+      }
+    }
+
+    function renderLeaderboard() {
+      const body = document.getElementById("leaderboardBody");
+      const empty = document.getElementById("leaderboardEmpty");
+      const data = loadLeaderboard();
+      body.innerHTML = "";
+
+      if (!data.length) {
+        empty.style.display = "block";
+        return;
+      }
+
+      empty.style.display = "none";
+
+      data
+        .slice()
+        .sort((a,b) => b.pct - a.pct || b.score - a.score)
+        .forEach((entry, index) => {
+          const tr = document.createElement("tr");
+          const tdRank = document.createElement("td");
+          const tdName = document.createElement("td");
+          const tdScore = document.createElement("td");
+          const tdPct = document.createElement("td");
+          const tdPerim = document.createElement("td");
+
+          tdRank.textContent = index + 1;
+          tdName.textContent = entry.name || "—";
+          tdScore.textContent = entry.score + " / " + entry.total;
+          tdPct.textContent = entry.pct + " %";
+          tdPerim.textContent = entry.perimeter || "";
+
+          tr.appendChild(tdRank);
+          tr.appendChild(tdName);
+          tr.appendChild(tdScore);
+          tr.appendChild(tdPct);
+          tr.appendChild(tdPerim);
+
+          body.appendChild(tr);
+        });
+    }
+
+    const btnSaveScore = document.getElementById("btnSaveScore");
+    const btnClearScores = document.getElementById("btnClearScores");
+    const leaderNameInput = document.getElementById("leaderName");
+
+    btnSaveScore.addEventListener("click", () => {
+      const name = (leaderNameInput.value || "").trim();
+      if (!name) {
+        alert("Merci de renseigner un nom ou nom d’équipe.");
+        return;
+      }
+      if (!quizActive || !quizActive.length) {
+        alert("Aucun quiz n’a été joué pour l’instant.");
+        return;
+      }
+      const total = quizActive.length;
+      const pct = total > 0 ? Math.round((quizScore / total) * 100) : 0;
+      const perimeter = getPerimeterLabel();
+
+      const list = loadLeaderboard();
+      list.push({
+        name,
+        score: quizScore,
+        total,
+        pct,
+        perimeter,
+        timestamp: new Date().toISOString()
+      });
+      saveLeaderboard(list);
+      renderLeaderboard();
+      leaderNameInput.value = "";
+      alert("Score enregistré pour le classement local.");
+    });
+
+    btnClearScores.addEventListener("click", () => {
+      if (confirm("Supprimer tous les scores enregistrés sur cet appareil ?")) {
+        saveLeaderboard([]);
+        renderLeaderboard();
+      }
+    });
+
+    // ENVOI DE SCORE PAR MAIL (mailto)
+    const btnSendResultEmail = document.getElementById("btnSendResultEmail");
+    btnSendResultEmail.addEventListener("click", () => {
+      if (!quizActive || !quizActive.length) {
+        alert("Merci de jouer au quiz avant d’envoyer votre score par mail.");
+        return;
+      }
+      const total = quizActive.length;
+      const pct = total > 0 ? Math.round((quizScore / total) * 100) : 0;
+
+      const participantName = prompt("Votre nom / équipe (pour le classement) :");
+      if (!participantName) return;
+
+      let email = ORGANIZER_EMAIL;
+      if (!email) {
+        const entered = prompt("Adresse mail de l’organisateur (où envoyer votre score) :");
+        if (!entered) return;
+        email = entered.trim();
+      }
+
+      const perimetre = getPerimeterLabel();
+
+      const subject = encodeURIComponent("Score Quiz Ségur – " + participantName);
+
+      const bodyLines = [
+        "Nom / équipe : " + participantName,
+        "Score : " + quizScore + " / " + total + " (" + pct + " %)",
+        "Périmètre : " + perimetre,
+        "",
+        "Envoyé depuis le quiz Ségur & services socles.",
+        "Événement : JOURNÉE DES CPTS YVELINOISES 2025 – Poissy"
+      ];
+      const body = encodeURIComponent(bodyLines.join("\n"));
+
+      const mailtoUrl = "mailto:" + encodeURIComponent(email)
+        + "?subject=" + subject
+        + "&body=" + body;
+
+      window.location.href = mailtoUrl;
     });
 
     // LE SAVIEZ-VOUS
@@ -1388,8 +1715,9 @@
       renderFact(currentFactIndex + 1);
     });
 
-    // init
+    // Init
     renderFact(0);
+    renderLeaderboard();
   </script>
 </body>
 </html>
