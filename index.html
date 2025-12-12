@@ -916,228 +916,327 @@
     };
 
     const QUESTIONS = [
-      // DMP – Alimentation
-      {
-        id: "DMP_A_Q1",
-        service: "DMP",
-        sub: "Alimentation du DMP",
-        text: "Qui peut alimenter le DMP ?",
-        extra: "",
-        options: [
-          "Le médecin traitant",
-          "L’usager",
-          "Les acteurs du médico-social",
-          "Tous les acteurs de la Santé"
-        ],
-        correct: [0,1,2,3],
-        explanation: "Tous les acteurs de la santé (médecine de ville, établissements sanitaires, laboratoires, médico-social…), ainsi que l’usager lui-même, peuvent alimenter le DMP."
-      },
-      {
-        id: "DMP_A_Q2",
-        service: "DMP",
-        sub: "Alimentation du DMP",
-        text: "L’alimentation du DMP est-elle obligatoire ?",
-        extra: "",
-        options: [
-          "Non",
-          "Oui"
-        ],
-        correct: [1],
-        explanation: "Oui, l’alimentation du DMP est obligatoire : c’est inscrit dans la loi."
-      },
+  {
+    "id": "DMP_A_Q1",
+    "service": "DMP",
+    "sub": "Alimentation du DMP",
+    "text": "Qui peut alimenter le DMP ?",
+    "extra": "",
+    "options": [
+      "Le médecin traitant",
+      "L’usager",
+      "Les acteurs du médico-social",
+      "Tous les acteurs de la Santé"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Tous les acteurs de la santé (médecine de ville, établissements sanitaires, laboratoires, médico-social…), ainsi que l’usager lui-même, peuvent alimenter le DMP."
+  },
+  {
+    "id": "DMP_A_Q2",
+    "service": "DMP",
+    "sub": "Alimentation du DMP",
+    "text": "L’alimentation du DMP est-elle obligatoire ?",
+    "extra": "",
+    "options": [
+      "Non",
+      "Oui"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Oui, l’alimentation du DMP est obligatoire : c’est inscrit dans la loi."
+  },
+  {
+    "id": "DMP_C_Q1",
+    "service": "DMP",
+    "sub": "Consultation du DMP",
+    "text": "Combien y a-t-il eu de documents consultés à l’hôpital sur le mois de septembre 2025 ?",
+    "extra": "",
+    "options": [
+      "38 698",
+      "1 504",
+      "12 057"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "En septembre 2025, 38 698 documents ont été consultés à l’hôpital, ce qui illustre l’importance opérationnelle du DMP."
+  },
+  {
+    "id": "DMP_C_Q2",
+    "service": "DMP",
+    "sub": "Consultation du DMP",
+    "text": "Pour consulter le DMP d’un patient, le professionnel de santé doit-il recueillir son consentement explicite ?",
+    "extra": "",
+    "options": [
+      "Oui",
+      "Non",
+      "Cela dépend du professionnel de santé",
+      "Cela dépend de la prise en charge"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Au sens de la loi : le consentement est présumé pour un professionnel faisant partie de l’équipe de soins et explicite pour un professionnel qui n’en fait pas partie. Au sens du Ségur, on encourage un consentement explicite tracé dans les systèmes. En cas de risque vital, le bris de glace est possible avec motif renseigné."
+  },
+  {
+    "id": "DMP_C_Q3",
+    "service": "DMP",
+    "sub": "Consultation du DMP",
+    "text": "Comment se définit un épisode de soins ?",
+    "extra": "",
+    "options": [
+      "À travers la réglementation",
+      "Cela dépend de la prise en charge",
+      "Cela ne peut pas se définir",
+      "C’est au patient de le définir"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Il n’existe pas de définition réglementaire unique de l’épisode de soins. Il correspond à une période avec date de début et de fin, en lien avec une pathologie nécessitant un suivi ; c’est à l’établissement d’en définir les contours, ce qui conditionne la durée d’autorisation de consultation."
+  },
+  {
+    "id": "DMP_C_Q4",
+    "service": "DMP",
+    "sub": "Consultation du DMP",
+    "text": "Comment est tracée la consultation d’un DMP dans Mon Espace Santé ?",
+    "extra": "",
+    "options": [
+      "Elle n’est pas tracée",
+      "Un mail est transmis au patient concerné",
+      "Une notification apparaît dans le profil MES du patient",
+      "Un SMS est transmis par l’établissement qui consulte"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "La consultation est tracée : le patient peut être averti par mail s’il n’a pas l’application MES, ou par notification dans l’application. Il retrouve l’historique des accès et l’identité des professionnels."
+  },
+  {
+    "id": "DMP_C_Q5",
+    "service": "DMP",
+    "sub": "Consultation du DMP",
+    "text": "Pour consulter le DMP d’un mineur, faut-il recueillir le consentement des deux parents ?",
+    "extra": "",
+    "options": [
+      "Oui",
+      "Non"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Non. Il n’existe pas de régime spécifique encadrant la consultation du DMP pour les mineurs : on applique la même logique que pour le consentement aux soins."
+  },
+  {
+    "id": "DMP_C_Q6",
+    "service": "DMP",
+    "sub": "Consultation du DMP",
+    "text": "Dans le cadre de majeurs sous tutelle (représentation de biens), qui peut donner le consentement à la consultation de son DMP ?",
+    "extra": "",
+    "options": [
+      "Le majeur lui-même",
+      "Le tuteur",
+      "Le juge"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dans ce cas, c’est le majeur lui-même qui donne son consentement à la consultation de son DMP."
+  },
+  {
+    "id": "DMP_C_Q7",
+    "service": "DMP",
+    "sub": "Consultation du DMP",
+    "text": "Que signifie la connexion secrète ?",
+    "extra": "",
+    "options": [
+      "Le patient consulte son DMP sans que les PS soient notifiés",
+      "Le PS consulte le DMP sans aucune trace pour le patient",
+      "Le PS active la connexion secrète sur demande du patient mineur",
+      "Le PS consulte sans que les représentants légaux soient notifiés de la consultation"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "La connexion secrète permet au professionnel de santé, à la demande du patient mineur, de consulter le DMP sans notifier automatiquement les représentants légaux, tout en conservant une traçabilité."
+  },
+  {
+    "id": "MES_Q1",
+    "service": "MES",
+    "sub": "Mon espace santé",
+    "text": "Comment un usager peut-il demander l’ouverture de son compte Mon espace santé ?",
+    "extra": "",
+    "options": [
+      "En demandant à son médecin traitant",
+      "Pas la peine, il est déjà ouvert !",
+      "En appelant le 3422, ils s’occupent de tout"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Les comptes MES ont été créés pour la plupart des assurés. L’usager doit surtout activer son compte. En cas de besoin, le 3422 peut l’accompagner."
+  },
+  {
+    "id": "MES_Q2",
+    "service": "MES",
+    "sub": "Mon espace santé",
+    "text": "Où sont stockées les données de Mon espace santé ?",
+    "extra": "",
+    "options": [
+      "Chez Microsoft, dans le cadre de ses missions philanthropiques",
+      "Dans un endroit tenu secret",
+      "Dans l’ordinateur ou le smartphone de l’usager",
+      "En France, chez un hébergeur agréé HDS"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Les données MES sont hébergées en France chez un Hébergeur de Données de Santé (HDS) agréé."
+  },
+  {
+    "id": "MSS_Q1",
+    "service": "MSS",
+    "sub": "MSSanté",
+    "text": "Comment un professionnel de santé inscrit à l’ordre peut-il ouvrir sa Messagerie Sécurisée de Santé ?",
+    "extra": "",
+    "options": [
+      "En la demandant à un opérateur comme Gmail ou Microsoft",
+      "Elle est automatiquement créée dès son inscription à l’ordre"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dès son inscription à l’ordre, une adresse MSSanté est créée pour le professionnel et référencée dans l’annuaire santé."
+  },
+  {
+    "id": "MSS_Q2",
+    "service": "MSS",
+    "sub": "MSSanté",
+    "text": "Comment retrouver une adresse MSSanté ?",
+    "extra": "",
+    "options": [
+      "En recherchant sur Google",
+      "En consultant l’annuaire santé"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Les adresses MSSanté sont référencées dans l’annuaire santé, accessible à tous."
+  },
+  {
+    "id": "INS_Q1",
+    "service": "INS",
+    "sub": "Identité Nationale de Santé",
+    "text": "De quels traits d’identité est composée une INS ?",
+    "extra": "",
+    "options": [
+      "Du numéro de sécurité sociale uniquement",
+      "Nom de naissance, prénom de naissance, date de naissance, genre",
+      "Nom de naissance, prénom de naissance, date de naissance, genre, code commune de naissance",
+      "Nom de naissance, prénom de naissance, date de naissance, genre, code commune de naissance, code commune d’habitation"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Une INS repose notamment sur les traits : nom et prénom(s) de naissance, date de naissance, genre et code commune de naissance."
+  },
+  {
+    "id": "INS_Q2",
+    "service": "INS",
+    "sub": "Identité Nationale de Santé",
+    "text": "Un mineur a-t-il une INS ?",
+    "extra": "",
+    "options": [
+      "Non, car il n’a pas encore de numéro de sécurité sociale",
+      "Oui"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Oui : dès la naissance, une personne physique dispose d’une INS."
+  },
+  {
+    "id": "MSS_Q3",
+    "service": "MSS",
+    "sub": "",
+    "text": "Est-ce  qu'un usager dispose t-il d'une adresse MSSanté ?",
+    "extra": "",
+    "options": [
+      "Non, seuls les professionnels de santé disposent d'une MSSanté ?",
+      "Oui, c'est possible, il faut demander une création de MSSanté à l'Assurance Maladie",
+      "Oui, elle est incluse dans Mon espace santé"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "MSS_Q4",
+    "service": "MSS",
+    "sub": "",
+    "text": "Dans quel cas un usager peut écrire directement à un Professionnel de Santé via la MSSanté ?",
+    "extra": "",
+    "options": [
+      "Seulement si le Professionnel de Santé a initié un échange via MSSanté",
+      "Si le professionnel de santé donne son consentement dans le DMP",
+      "Si l'usager veut envoyer une ordonnance à un pharmacien",
+      "Si le professionnel de santé est injoignable par téléphone"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "MSS_Q5",
+    "service": "MSS",
+    "sub": "",
+    "text": "J'ai plusieurs contextes d'exercice professionnels dois-je avoir plusieurs boites MSSanté ?",
+    "extra": "",
+    "options": [
+      "Oui,",
+      "Non, je peux créer des alias"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Pour chaque contexte d'exercice vous devez disposer d'une adresse MSSanté dédiée soit nominative soit organisationnelle."
+  },
+  {
+    "id": "INS_Q3",
+    "service": "INS",
+    "sub": "",
+    "text": "Quelle pièce justificative permet de qualifier une Identité Nationale de Santé (INS) ?",
+    "extra": "",
+    "options": [
+      "Une Carte Nationale d’Identité",
+      "Un permis de conduire",
+      "Une Carte Vitale",
+      "Un titre de séjour de moins de 10 ans",
+      "Un livret de famille"
+    ],
+    "correct": [
+      0,
+      4
+    ],
+    "explanation": ""
+  }
+];
 
-      // DMP – Consultation
-      {
-        id: "DMP_C_Q1",
-        service: "DMP",
-        sub: "Consultation du DMP",
-        text: "Combien y a-t-il eu de documents consultés à l’hôpital sur le mois de septembre 2025 ?",
-        extra: "",
-        options: [
-          "38 698",
-          "1 504",
-          "12 057"
-        ],
-        correct: [0],
-        explanation: "En septembre 2025, 38 698 documents ont été consultés à l’hôpital, ce qui illustre l’importance opérationnelle du DMP."
-      },
-      {
-        id: "DMP_C_Q2",
-        service: "DMP",
-        sub: "Consultation du DMP",
-        text: "Pour consulter le DMP d’un patient, le professionnel de santé doit-il recueillir son consentement explicite ?",
-        extra: "",
-        options: [
-          "Oui",
-          "Non",
-          "Cela dépend du professionnel de santé",
-          "Cela dépend de la prise en charge"
-        ],
-        correct: [0,1,2,3],
-        explanation: "Au sens de la loi : le consentement est présumé pour un professionnel faisant partie de l’équipe de soins et explicite pour un professionnel qui n’en fait pas partie. Au sens du Ségur, on encourage un consentement explicite tracé dans les systèmes. En cas de risque vital, le bris de glace est possible avec motif renseigné."
-      },
-      {
-        id: "DMP_C_Q3",
-        service: "DMP",
-        sub: "Consultation du DMP",
-        text: "Comment se définit un épisode de soins ?",
-        extra: "",
-        options: [
-          "À travers la réglementation",
-          "Cela dépend de la prise en charge",
-          "Cela ne peut pas se définir",
-          "C’est au patient de le définir"
-        ],
-        correct: [1],
-        explanation: "Il n’existe pas de définition réglementaire unique de l’épisode de soins. Il correspond à une période avec date de début et de fin, en lien avec une pathologie nécessitant un suivi ; c’est à l’établissement d’en définir les contours, ce qui conditionne la durée d’autorisation de consultation."
-      },
-      {
-        id: "DMP_C_Q4",
-        service: "DMP",
-        sub: "Consultation du DMP",
-        text: "Comment est tracée la consultation d’un DMP dans Mon Espace Santé ?",
-        extra: "",
-        options: [
-          "Elle n’est pas tracée",
-          "Un mail est transmis au patient concerné",
-          "Une notification apparaît dans le profil MES du patient",
-          "Un SMS est transmis par l’établissement qui consulte"
-        ],
-        correct: [1,2],
-        explanation: "La consultation est tracée : le patient peut être averti par mail s’il n’a pas l’application MES, ou par notification dans l’application. Il retrouve l’historique des accès et l’identité des professionnels."
-      },
-      {
-        id: "DMP_C_Q5",
-        service: "DMP",
-        sub: "Consultation du DMP",
-        text: "Pour consulter le DMP d’un mineur, faut-il recueillir le consentement des deux parents ?",
-        extra: "",
-        options: [
-          "Oui",
-          "Non"
-        ],
-        correct: [1],
-        explanation: "Non. Il n’existe pas de régime spécifique encadrant la consultation du DMP pour les mineurs : on applique la même logique que pour le consentement aux soins."
-      },
-      {
-        id: "DMP_C_Q6",
-        service: "DMP",
-        sub: "Consultation du DMP",
-        text: "Dans le cadre de majeurs sous tutelle (représentation de biens), qui peut donner le consentement à la consultation de son DMP ?",
-        extra: "",
-        options: [
-          "Le majeur lui-même",
-          "Le tuteur",
-          "Le juge"
-        ],
-        correct: [0],
-        explanation: "Dans ce cas, c’est le majeur lui-même qui donne son consentement à la consultation de son DMP."
-      },
-      {
-        id: "DMP_C_Q7",
-        service: "DMP",
-        sub: "Consultation du DMP",
-        text: "Que signifie la connexion secrète ?",
-        extra: "",
-        options: [
-          "Le patient consulte son DMP sans que les PS soient notifiés",
-          "Le PS consulte le DMP sans aucune trace pour le patient",
-          "Le PS active la connexion secrète sur demande du patient mineur",
-          "Le PS consulte sans que les représentants légaux soient notifiés de la consultation"
-        ],
-        correct: [2,3],
-        explanation: "La connexion secrète permet au professionnel de santé, à la demande du patient mineur, de consulter le DMP sans notifier automatiquement les représentants légaux, tout en conservant une traçabilité."
-      },
-
-      // Mon espace santé
-      {
-        id: "MES_Q1",
-        service: "MES",
-        sub: "Mon espace santé",
-        text: "Comment un usager peut-il demander l’ouverture de son compte Mon espace santé ?",
-        extra: "",
-        options: [
-          "En demandant à son médecin traitant",
-          "Pas la peine, il est déjà ouvert !",
-          "En appelant le 3422, ils s’occupent de tout"
-        ],
-        correct: [1,2],
-        explanation: "Les comptes MES ont été créés pour la plupart des assurés. L’usager doit surtout activer son compte. En cas de besoin, le 3422 peut l’accompagner."
-      },
-      {
-        id: "MES_Q2",
-        service: "MES",
-        sub: "Mon espace santé",
-        text: "Où sont stockées les données de Mon espace santé ?",
-        extra: "",
-        options: [
-          "Chez Microsoft, dans le cadre de ses missions philanthropiques",
-          "Dans un endroit tenu secret",
-          "Dans l’ordinateur ou le smartphone de l’usager",
-          "En France, chez un hébergeur agréé HDS"
-        ],
-        correct: [3],
-        explanation: "Les données MES sont hébergées en France chez un Hébergeur de Données de Santé (HDS) agréé."
-      },
-
-      // MSSanté
-      {
-        id: "MSS_Q1",
-        service: "MSS",
-        sub: "MSSanté",
-        text: "Comment un professionnel de santé inscrit à l’ordre peut-il ouvrir sa Messagerie Sécurisée de Santé ?",
-        extra: "",
-        options: [
-          "En la demandant à un opérateur comme Gmail ou Microsoft",
-          "Elle est automatiquement créée dès son inscription à l’ordre"
-        ],
-        correct: [1],
-        explanation: "Dès son inscription à l’ordre, une adresse MSSanté est créée pour le professionnel et référencée dans l’annuaire santé."
-      },
-      {
-        id: "MSS_Q2",
-        service: "MSS",
-        sub: "MSSanté",
-        text: "Comment retrouver une adresse MSSanté ?",
-        extra: "",
-        options: [
-          "En recherchant sur Google",
-          "En consultant l’annuaire santé"
-        ],
-        correct: [1],
-        explanation: "Les adresses MSSanté sont référencées dans l’annuaire santé, accessible à tous."
-      },
-
-      // INS
-      {
-        id: "INS_Q1",
-        service: "INS",
-        sub: "Identité Nationale de Santé",
-        text: "De quels traits d’identité est composée une INS ?",
-        extra: "",
-        options: [
-          "Du numéro de sécurité sociale uniquement",
-          "Nom de naissance, prénom de naissance, date de naissance, genre",
-          "Nom de naissance, prénom de naissance, date de naissance, genre, code commune de naissance",
-          "Nom de naissance, prénom de naissance, date de naissance, genre, code commune de naissance, code commune d’habitation"
-        ],
-        correct: [2],
-        explanation: "Une INS repose notamment sur les traits : nom et prénom(s) de naissance, date de naissance, genre et code commune de naissance."
-      },
-      {
-        id: "INS_Q2",
-        service: "INS",
-        sub: "Identité Nationale de Santé",
-        text: "Un mineur a-t-il une INS ?",
-        extra: "",
-        options: [
-          "Non, car il n’a pas encore de numéro de sécurité sociale",
-          "Oui"
-        ],
-        correct: [1],
-        explanation: "Oui : dès la naissance, une personne physique dispose d’une INS."
-      }
-    ];
 
     const FACTS = [
       {
@@ -1721,3 +1820,4 @@
   </script>
 </body>
 </html>
+
