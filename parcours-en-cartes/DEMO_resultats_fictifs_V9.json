@@ -1,0 +1,695 @@
+{
+  "format": "exco-num-v5",
+  "version": 9,
+  "packVersion": "1.0",
+  "exportedAt": "2026-10-18T15:38:28.405Z",
+  "sourceDate": "05/10/2026",
+  "sessions": [
+    {
+      "id": "ce1e6ea3-0368-4bc1-9e1d-ff9abbf49084",
+      "name": "Table démo A",
+      "department": "Territoire de démonstration",
+      "participants": "Participant fictif 1 (CPAM), Participant fictif 2 (ARS), Participant fictif 3 (SESAN), Participant fictif 4 (CPAM), Participant fictif 5 (SESAN)",
+      "createdAt": "2026-10-18T15:38:28.405Z",
+      "updatedAt": "2026-10-18T15:38:28.405Z",
+      "currentJourney": "emilie",
+      "parts": {},
+      "journeys": {
+        "emilie": {
+          "steps": {
+            "4": {
+              "actors": [
+                {
+                  "id": "4cecc900-3116-4fab-867c-dd8bc6d604b8",
+                  "cardId": "medecin",
+                  "customName": "",
+                  "notes": {
+                    "why": "",
+                    "freins": "",
+                    "irritants": "",
+                    "leviers": "",
+                    "edl": "",
+                    "accord": "",
+                    "desaccord": "",
+                    "question": "",
+                    "action": "",
+                    "acteurCle": "",
+                    "moment": "",
+                    "canal": "",
+                    "pilote": "",
+                    "echeance": "",
+                    "statut": "",
+                    "source": ""
+                  },
+                  "ratings": {}
+                }
+              ],
+              "tools": [
+                {
+                  "id": "bb434794-6d98-4846-8226-247a08149ce1",
+                  "cardId": "santelien",
+                  "customName": "",
+                  "notes": {
+                    "why": "Exemple fictif : identifier les bons contacts et organiser l’échange utile.",
+                    "freins": "Exemple fictif : coordonnées des intervenants difficiles à retrouver.",
+                    "irritants": "",
+                    "leviers": "Exemple fictif : accompagner le premier échange et conserver une trace de la décision.",
+                    "edl": "Exemple fictif : identifions ensemble qui joindre et à quel moment.",
+                    "accord": "",
+                    "desaccord": "",
+                    "question": "",
+                    "action": "",
+                    "acteurCle": "",
+                    "moment": "",
+                    "canal": "",
+                    "pilote": "",
+                    "echeance": "",
+                    "statut": "",
+                    "source": ""
+                  },
+                  "ratings": {
+                    "pertinence": 4,
+                    "facilite": 3,
+                    "temps": 4,
+                    "equipement": 2
+                  }
+                }
+              ],
+              "irritants": [
+                {
+                  "id": "3898521a-fe89-41a1-bb3b-2f15533e8f3b",
+                  "cardId": "i7",
+                  "customName": "",
+                  "notes": {
+                    "why": "",
+                    "freins": "",
+                    "irritants": "",
+                    "leviers": "Exemple fictif : écouter l’usage actuel et proposer un essai accompagné.",
+                    "edl": "",
+                    "accord": "",
+                    "desaccord": "",
+                    "question": "",
+                    "action": "",
+                    "acteurCle": "",
+                    "moment": "",
+                    "canal": "",
+                    "pilote": "",
+                    "echeance": "",
+                    "statut": "",
+                    "source": ""
+                  },
+                  "ratings": {}
+                },
+                {
+                  "id": "ba8a67bf-8342-42f7-9a21-6a449ab77577",
+                  "cardId": "i6",
+                  "customName": "",
+                  "notes": {
+                    "why": "",
+                    "freins": "",
+                    "irritants": "",
+                    "leviers": "Exemple fictif : écouter l’usage actuel et proposer un essai accompagné.",
+                    "edl": "",
+                    "accord": "",
+                    "desaccord": "",
+                    "question": "",
+                    "action": "",
+                    "acteurCle": "",
+                    "moment": "",
+                    "canal": "",
+                    "pilote": "",
+                    "echeance": "",
+                    "statut": "",
+                    "source": ""
+                  },
+                  "ratings": {}
+                }
+              ],
+              "discussion": {
+                "why": "",
+                "freins": "",
+                "irritants": "",
+                "leviers": "",
+                "edl": "",
+                "accord": "",
+                "desaccord": "",
+                "question": "",
+                "action": "",
+                "acteurCle": "",
+                "moment": "",
+                "canal": "",
+                "pilote": "",
+                "echeance": "",
+                "statut": "",
+                "source": ""
+              }
+            }
+          },
+          "summary": {
+            "phrase": "Exemple fictif : un besoin concret pour ouvrir la discussion.",
+            "consensus": "Exemple fictif : partir d’une difficulté de coordination exprimée par les professionnels.",
+            "desaccords": "Exemple fictif : quelle durée de démonstration proposer ?",
+            "questions": "Exemple fictif : qui est le contact local le plus adapté ?",
+            "actions": "Exemple fictif : préparer un rendez-vous commun avec une structure volontaire.",
+            "acteurs": "Exemple fictif : coordinateur de CPTS et référent de MSP.",
+            "moments": "Exemple fictif : réunion de projet de santé.",
+            "communication": "Exemple fictif : courriel bref suivi d’un appel.",
+            "pilote": "Pilote à désigner",
+            "echeance": "Échéance à fixer"
+          }
+        }
+      },
+      "timer": {
+        "durationMs": 2700000,
+        "remainingMs": 2700000,
+        "deadline": null,
+        "phase": "idle"
+      },
+      "groupKey": "ce1e6ea3-0368-4bc1-9e1d-ff9abbf49084",
+      "roster": [
+        {
+          "id": "demo-0-0",
+          "name": "Participant fictif 1",
+          "organisation": "CPAM",
+          "department": "Département démo",
+          "role": "Saisie",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        },
+        {
+          "id": "demo-0-1",
+          "name": "Participant fictif 2",
+          "organisation": "ARS",
+          "department": "Département démo",
+          "role": "Rapporteur",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        },
+        {
+          "id": "demo-0-2",
+          "name": "Participant fictif 3",
+          "organisation": "SESAN",
+          "department": "Département démo",
+          "role": "Gardien du temps",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        },
+        {
+          "id": "demo-0-3",
+          "name": "Participant fictif 4",
+          "organisation": "CPAM",
+          "department": "Département démo",
+          "role": "Participant",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        },
+        {
+          "id": "demo-0-4",
+          "name": "Participant fictif 5",
+          "organisation": "SESAN",
+          "department": "Département démo",
+          "role": "Participant",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        }
+      ],
+      "registrationCompleted": true,
+      "workshop": {
+        "id": "demo-exco",
+        "title": "Exemple de restitution des ateliers",
+        "date": "",
+        "animatorEmail": "",
+        "instructions": "Données fictives pour tester le pack. Retirer les groupes démo avant une séance réelle."
+      },
+      "assignedJourney": "emilie",
+      "registrationDraft": null,
+      "demo": true,
+      "receivedAt": "",
+      "receivedFile": ""
+    },
+    {
+      "id": "97a19362-e9be-40b2-b384-0fdecb1314ca",
+      "name": "Table démo B",
+      "department": "Territoire de démonstration",
+      "participants": "Participant fictif 1 (CPAM), Participant fictif 2 (ARS), Participant fictif 3 (SESAN), Participant fictif 4 (CPAM), Participant fictif 5 (SESAN)",
+      "createdAt": "2026-10-18T15:38:28.405Z",
+      "updatedAt": "2026-10-18T15:38:28.405Z",
+      "currentJourney": "monique",
+      "parts": {},
+      "journeys": {
+        "monique": {
+          "steps": {
+            "3": {
+              "actors": [
+                {
+                  "id": "660b4a05-b453-4cbb-b9d8-0a1bc65614e0",
+                  "cardId": "medecin",
+                  "customName": "",
+                  "notes": {
+                    "why": "",
+                    "freins": "",
+                    "irritants": "",
+                    "leviers": "",
+                    "edl": "",
+                    "accord": "",
+                    "desaccord": "",
+                    "question": "",
+                    "action": "",
+                    "acteurCle": "",
+                    "moment": "",
+                    "canal": "",
+                    "pilote": "",
+                    "echeance": "",
+                    "statut": "",
+                    "source": ""
+                  },
+                  "ratings": {}
+                }
+              ],
+              "tools": [
+                {
+                  "id": "dabf72f4-d782-40a2-8634-6a79ad754c4d",
+                  "cardId": "santelien",
+                  "customName": "",
+                  "notes": {
+                    "why": "Exemple fictif : identifier les bons contacts et organiser l’échange utile.",
+                    "freins": "Exemple fictif : coordonnées des intervenants difficiles à retrouver.",
+                    "irritants": "",
+                    "leviers": "Exemple fictif : accompagner le premier échange et conserver une trace de la décision.",
+                    "edl": "Exemple fictif : identifions ensemble qui joindre et à quel moment.",
+                    "accord": "",
+                    "desaccord": "",
+                    "question": "",
+                    "action": "",
+                    "acteurCle": "",
+                    "moment": "",
+                    "canal": "",
+                    "pilote": "",
+                    "echeance": "",
+                    "statut": "",
+                    "source": ""
+                  },
+                  "ratings": {
+                    "pertinence": 4,
+                    "facilite": 4,
+                    "temps": 4,
+                    "equipement": 3
+                  }
+                }
+              ],
+              "irritants": [
+                {
+                  "id": "acb2f8a4-f041-415d-a57a-1b7f420302c6",
+                  "cardId": "i10",
+                  "customName": "",
+                  "notes": {
+                    "why": "",
+                    "freins": "",
+                    "irritants": "",
+                    "leviers": "Exemple fictif : écouter l’usage actuel et proposer un essai accompagné.",
+                    "edl": "",
+                    "accord": "",
+                    "desaccord": "",
+                    "question": "",
+                    "action": "",
+                    "acteurCle": "",
+                    "moment": "",
+                    "canal": "",
+                    "pilote": "",
+                    "echeance": "",
+                    "statut": "",
+                    "source": ""
+                  },
+                  "ratings": {}
+                },
+                {
+                  "id": "d453a6b2-c336-4ca7-91ea-4ecb025433a0",
+                  "cardId": "i6",
+                  "customName": "",
+                  "notes": {
+                    "why": "",
+                    "freins": "",
+                    "irritants": "",
+                    "leviers": "Exemple fictif : écouter l’usage actuel et proposer un essai accompagné.",
+                    "edl": "",
+                    "accord": "",
+                    "desaccord": "",
+                    "question": "",
+                    "action": "",
+                    "acteurCle": "",
+                    "moment": "",
+                    "canal": "",
+                    "pilote": "",
+                    "echeance": "",
+                    "statut": "",
+                    "source": ""
+                  },
+                  "ratings": {}
+                }
+              ],
+              "discussion": {
+                "why": "",
+                "freins": "",
+                "irritants": "",
+                "leviers": "",
+                "edl": "",
+                "accord": "",
+                "desaccord": "",
+                "question": "",
+                "action": "",
+                "acteurCle": "",
+                "moment": "",
+                "canal": "",
+                "pilote": "",
+                "echeance": "",
+                "statut": "",
+                "source": ""
+              }
+            }
+          },
+          "summary": {
+            "phrase": "Exemple fictif : un besoin concret pour ouvrir la discussion.",
+            "consensus": "Exemple fictif : partir d’une difficulté de coordination exprimée par les professionnels.",
+            "desaccords": "Exemple fictif : quelle durée de démonstration proposer ?",
+            "questions": "Exemple fictif : qui est le contact local le plus adapté ?",
+            "actions": "Exemple fictif : préparer un rendez-vous commun avec une structure volontaire.",
+            "acteurs": "Exemple fictif : coordinateur de CPTS et référent de MSP.",
+            "moments": "Exemple fictif : réunion de projet de santé.",
+            "communication": "Exemple fictif : courriel bref suivi d’un appel.",
+            "pilote": "Pilote à désigner",
+            "echeance": "Échéance à fixer"
+          }
+        }
+      },
+      "timer": {
+        "durationMs": 2700000,
+        "remainingMs": 2700000,
+        "deadline": null,
+        "phase": "idle"
+      },
+      "groupKey": "97a19362-e9be-40b2-b384-0fdecb1314ca",
+      "roster": [
+        {
+          "id": "demo-1-0",
+          "name": "Participant fictif 1",
+          "organisation": "CPAM",
+          "department": "Département démo",
+          "role": "Saisie",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        },
+        {
+          "id": "demo-1-1",
+          "name": "Participant fictif 2",
+          "organisation": "ARS",
+          "department": "Département démo",
+          "role": "Rapporteur",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        },
+        {
+          "id": "demo-1-2",
+          "name": "Participant fictif 3",
+          "organisation": "SESAN",
+          "department": "Département démo",
+          "role": "Gardien du temps",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        },
+        {
+          "id": "demo-1-3",
+          "name": "Participant fictif 4",
+          "organisation": "CPAM",
+          "department": "Département démo",
+          "role": "Participant",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        },
+        {
+          "id": "demo-1-4",
+          "name": "Participant fictif 5",
+          "organisation": "SESAN",
+          "department": "Département démo",
+          "role": "Participant",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        }
+      ],
+      "registrationCompleted": true,
+      "workshop": {
+        "id": "demo-exco",
+        "title": "Exemple de restitution des ateliers",
+        "date": "",
+        "animatorEmail": "",
+        "instructions": "Données fictives pour tester le pack. Retirer les groupes démo avant une séance réelle."
+      },
+      "assignedJourney": "monique",
+      "registrationDraft": null,
+      "demo": true,
+      "receivedAt": "",
+      "receivedFile": ""
+    },
+    {
+      "id": "9029dc6f-0ade-4505-a228-615eef553884",
+      "name": "Table démo C",
+      "department": "Territoire de démonstration",
+      "participants": "Participant fictif 1 (CPAM), Participant fictif 2 (ARS), Participant fictif 3 (SESAN), Participant fictif 4 (CPAM), Participant fictif 5 (SESAN)",
+      "createdAt": "2026-10-18T15:38:28.405Z",
+      "updatedAt": "2026-10-18T15:38:28.405Z",
+      "currentJourney": "philippe",
+      "parts": {},
+      "journeys": {
+        "philippe": {
+          "steps": {
+            "3": {
+              "actors": [
+                {
+                  "id": "cc496d0a-b458-4b47-9461-91c6ca2316cc",
+                  "cardId": "medecin",
+                  "customName": "",
+                  "notes": {
+                    "why": "",
+                    "freins": "",
+                    "irritants": "",
+                    "leviers": "",
+                    "edl": "",
+                    "accord": "",
+                    "desaccord": "",
+                    "question": "",
+                    "action": "",
+                    "acteurCle": "",
+                    "moment": "",
+                    "canal": "",
+                    "pilote": "",
+                    "echeance": "",
+                    "statut": "",
+                    "source": ""
+                  },
+                  "ratings": {}
+                }
+              ],
+              "tools": [
+                {
+                  "id": "17b90cd3-788c-44eb-85b5-f4b750f1e8d3",
+                  "cardId": "telephone",
+                  "customName": "",
+                  "notes": {
+                    "why": "Exemple fictif : identifier les bons contacts et organiser l’échange utile.",
+                    "freins": "Exemple fictif : coordonnées des intervenants difficiles à retrouver.",
+                    "irritants": "",
+                    "leviers": "Exemple fictif : accompagner le premier échange et conserver une trace de la décision.",
+                    "edl": "Exemple fictif : identifions ensemble qui joindre et à quel moment.",
+                    "accord": "",
+                    "desaccord": "",
+                    "question": "",
+                    "action": "",
+                    "acteurCle": "",
+                    "moment": "",
+                    "canal": "",
+                    "pilote": "",
+                    "echeance": "",
+                    "statut": "",
+                    "source": ""
+                  },
+                  "ratings": {
+                    "pertinence": 4,
+                    "facilite": 3,
+                    "temps": 4,
+                    "equipement": 4
+                  }
+                }
+              ],
+              "irritants": [
+                {
+                  "id": "b614948e-788b-4617-91cd-32177d8dcebd",
+                  "cardId": "i3",
+                  "customName": "",
+                  "notes": {
+                    "why": "",
+                    "freins": "",
+                    "irritants": "",
+                    "leviers": "Exemple fictif : écouter l’usage actuel et proposer un essai accompagné.",
+                    "edl": "",
+                    "accord": "",
+                    "desaccord": "",
+                    "question": "",
+                    "action": "",
+                    "acteurCle": "",
+                    "moment": "",
+                    "canal": "",
+                    "pilote": "",
+                    "echeance": "",
+                    "statut": "",
+                    "source": ""
+                  },
+                  "ratings": {}
+                },
+                {
+                  "id": "822b663d-74e7-4ea6-8cab-5b67e183c6bd",
+                  "cardId": "i6",
+                  "customName": "",
+                  "notes": {
+                    "why": "",
+                    "freins": "",
+                    "irritants": "",
+                    "leviers": "Exemple fictif : écouter l’usage actuel et proposer un essai accompagné.",
+                    "edl": "",
+                    "accord": "",
+                    "desaccord": "",
+                    "question": "",
+                    "action": "",
+                    "acteurCle": "",
+                    "moment": "",
+                    "canal": "",
+                    "pilote": "",
+                    "echeance": "",
+                    "statut": "",
+                    "source": ""
+                  },
+                  "ratings": {}
+                }
+              ],
+              "discussion": {
+                "why": "",
+                "freins": "",
+                "irritants": "",
+                "leviers": "",
+                "edl": "",
+                "accord": "",
+                "desaccord": "",
+                "question": "",
+                "action": "",
+                "acteurCle": "",
+                "moment": "",
+                "canal": "",
+                "pilote": "",
+                "echeance": "",
+                "statut": "",
+                "source": ""
+              }
+            }
+          },
+          "summary": {
+            "phrase": "Exemple fictif : un besoin concret pour ouvrir la discussion.",
+            "consensus": "Exemple fictif : partir d’une difficulté de coordination exprimée par les professionnels.",
+            "desaccords": "Exemple fictif : quelle durée de démonstration proposer ?",
+            "questions": "Exemple fictif : qui est le contact local le plus adapté ?",
+            "actions": "Exemple fictif : préparer un rendez-vous commun avec une structure volontaire.",
+            "acteurs": "Exemple fictif : coordinateur de CPTS et référent de MSP.",
+            "moments": "Exemple fictif : réunion de projet de santé.",
+            "communication": "Exemple fictif : courriel bref suivi d’un appel.",
+            "pilote": "Pilote à désigner",
+            "echeance": "Échéance à fixer"
+          }
+        }
+      },
+      "timer": {
+        "durationMs": 2700000,
+        "remainingMs": 2700000,
+        "deadline": null,
+        "phase": "idle"
+      },
+      "groupKey": "9029dc6f-0ade-4505-a228-615eef553884",
+      "roster": [
+        {
+          "id": "demo-2-0",
+          "name": "Participant fictif 1",
+          "organisation": "CPAM",
+          "department": "Département démo",
+          "role": "Saisie",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        },
+        {
+          "id": "demo-2-1",
+          "name": "Participant fictif 2",
+          "organisation": "ARS",
+          "department": "Département démo",
+          "role": "Rapporteur",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        },
+        {
+          "id": "demo-2-2",
+          "name": "Participant fictif 3",
+          "organisation": "SESAN",
+          "department": "Département démo",
+          "role": "Gardien du temps",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        },
+        {
+          "id": "demo-2-3",
+          "name": "Participant fictif 4",
+          "organisation": "CPAM",
+          "department": "Département démo",
+          "role": "Participant",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        },
+        {
+          "id": "demo-2-4",
+          "name": "Participant fictif 5",
+          "organisation": "SESAN",
+          "department": "Département démo",
+          "role": "Participant",
+          "level": "Intermédiaire",
+          "experience": "Occasionnelle"
+        }
+      ],
+      "registrationCompleted": true,
+      "workshop": {
+        "id": "demo-exco",
+        "title": "Exemple de restitution des ateliers",
+        "date": "",
+        "animatorEmail": "",
+        "instructions": "Données fictives pour tester le pack. Retirer les groupes démo avant une séance réelle."
+      },
+      "assignedJourney": "philippe",
+      "registrationDraft": null,
+      "demo": true,
+      "receivedAt": "",
+      "receivedFile": ""
+    }
+  ],
+  "administrator": {
+    "workshop": {
+      "id": "demo-exco",
+      "title": "Exemple de restitution des ateliers",
+      "date": "",
+      "animatorEmail": "",
+      "instructions": "Données fictives pour tester le pack. Retirer les groupes démo avant une séance réelle."
+    },
+    "global": {
+      "messages": "EXEMPLE FICTIF : les groupes explorent les conditions d’un premier usage.",
+      "consensus": "EXEMPLE FICTIF : le besoin de coordination sert de point de départ à la démonstration.",
+      "desaccords": "EXEMPLE FICTIF : les modalités de l’accompagnement restent à discuter.",
+      "edl": "EXEMPLE FICTIF : quel échange vous fait perdre du temps aujourd’hui ?",
+      "irritants": "EXEMPLE FICTIF : les coordonnées des intervenants se dispersent.",
+      "questions": "EXEMPLE FICTIF : identifier les contacts et les prérequis locaux.",
+      "actions": "EXEMPLE FICTIF : proposer un essai accompagné avec une structure volontaire.",
+      "suivi": "EXEMPLE FICTIF : préciser un pilote et une échéance en plénière."
+    },
+    "receipts": []
+  }
+}

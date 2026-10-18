@@ -1,0 +1,13 @@
+# Les réponses des groupes restent hors du dépôt public.
+resultats*/
+reponses*/
+sauvegardes*/
+exports*/
+*.json
+!DEMO_resultats_fictifs_V9.json
+*.csv
+*.xlsx
+*.env
+.env*
+node_modules/
+.DS_Store
