@@ -1,0 +1,269 @@
+{
+  "format": "exco-num-cpts-v1",
+  "version": 9,
+  "packVersion": "1.1-prototype-cpts",
+  "exportedAt": "2026-10-19T06:12:03.861Z",
+  "sourceDate": "05/10/2026",
+  "sessions": [
+    {
+      "id": "9c2a758a-3fde-41aa-b6ef-4549d10f59ff",
+      "name": "DÉMO FICTIVE · Missions CPTS",
+      "department": "Territoire fictif",
+      "participants": "Participant fictif 1 (CPAM), Participant fictif 2 (ARS), Participant fictif 3 (SESAN)",
+      "createdAt": "2026-10-19T06:12:03.861Z",
+      "updatedAt": "2026-10-19T06:12:03.861Z",
+      "currentJourney": "monique",
+      "parts": {},
+      "journeys": {},
+      "timer": {
+        "durationMs": 2700000,
+        "remainingMs": 2700000,
+        "deadline": null,
+        "phase": "idle"
+      },
+      "groupKey": "9c2a758a-3fde-41aa-b6ef-4549d10f59ff",
+      "roster": [
+        {
+          "id": "demo-cpts-p0",
+          "name": "Participant fictif 1",
+          "organisation": "CPAM",
+          "department": "Territoire fictif",
+          "role": "Saisie",
+          "level": "",
+          "experience": ""
+        },
+        {
+          "id": "demo-cpts-p1",
+          "name": "Participant fictif 2",
+          "organisation": "ARS",
+          "department": "Territoire fictif",
+          "role": "Rapporteur",
+          "level": "",
+          "experience": ""
+        },
+        {
+          "id": "demo-cpts-p2",
+          "name": "Participant fictif 3",
+          "organisation": "SESAN",
+          "department": "Territoire fictif",
+          "role": "Gardien du temps",
+          "level": "",
+          "experience": ""
+        }
+      ],
+      "registrationCompleted": true,
+      "workshop": {
+        "id": "f72aadcf-3d7a-431b-b451-6589abc776e4",
+        "title": "Démonstration fictive du prototype missions CPTS",
+        "date": "",
+        "animatorEmail": "",
+        "instructions": ""
+      },
+      "assignedJourney": "monique",
+      "registrationDraft": null,
+      "demo": true,
+      "receivedAt": "",
+      "receivedFile": "",
+      "cpts": {
+        "version": 1,
+        "assignment": "missions",
+        "assignedMission": "mt",
+        "mode": "missions",
+        "previousMode": "missions",
+        "currentMission": "mt",
+        "missions": {
+          "mt": {
+            "contexte": "Démonstration fictive : la table explore la recherche de médecin traitant.",
+            "theme": "",
+            "notesMission": "",
+            "actors": [],
+            "tools": [
+              {
+                "id": "3e5f56cb-3afa-4444-aebc-395bd947cdbd",
+                "cardId": "ressources-cpts",
+                "customName": "",
+                "notes": {
+                  "fonctionnalite": "Retrouver les relais territoriaux et les modalités de contact définies par la CPTS.",
+                  "contribution": "Proposition fictive : faciliter la mise en relation avec le bon interlocuteur local.",
+                  "objection": "Qui tient les coordonnées et modalités de contact à jour ?",
+                  "reponse": "À discuter : identifier un responsable et une fréquence de vérification.",
+                  "why": "",
+                  "freins": "",
+                  "irritants": "",
+                  "leviers": "",
+                  "edl": "Partons d’une difficulté de mise en relation que vous rencontrez déjà.",
+                  "accord": "",
+                  "desaccord": "",
+                  "question": "",
+                  "action": "",
+                  "acteurCle": "",
+                  "moment": "",
+                  "canal": "",
+                  "pilote": "",
+                  "echeance": "",
+                  "statut": "",
+                  "source": "Données de démonstration, à discuter en atelier."
+                },
+                "ratings": {
+                  "pertinence": 4,
+                  "facilite": 3,
+                  "temps": 3,
+                  "equipement": 2
+                }
+              }
+            ],
+            "irritants": [],
+            "timer": {
+              "durationMs": 1800000,
+              "remainingMs": 1800000,
+              "deadline": null,
+              "phase": "idle"
+            }
+          },
+          "snp": {
+            "contexte": "",
+            "theme": "",
+            "notesMission": "",
+            "actors": [],
+            "tools": [
+              {
+                "id": "0b3d21e4-dae7-4b72-83b3-d0a2cd2788b9",
+                "cardId": "mss",
+                "customName": "",
+                "notes": {
+                  "fonctionnalite": "Transmettre un retour de prise en charge par messagerie sécurisée.",
+                  "contribution": "Proposition fictive : faciliter le partage des informations utiles avec les professionnels qui suivent la personne.",
+                  "objection": "Nous avons déjà plusieurs canaux de communication.",
+                  "reponse": "À discuter : préciser qui reçoit quoi et à quel moment, à partir d’un usage concret.",
+                  "why": "",
+                  "freins": "",
+                  "irritants": "",
+                  "leviers": "",
+                  "edl": "Quel retour vous manque le plus souvent pour poursuivre le suivi ?",
+                  "accord": "",
+                  "desaccord": "",
+                  "question": "",
+                  "action": "",
+                  "acteurCle": "",
+                  "moment": "",
+                  "canal": "",
+                  "pilote": "",
+                  "echeance": "",
+                  "statut": "",
+                  "source": ""
+                },
+                "ratings": {
+                  "pertinence": 4,
+                  "facilite": 3,
+                  "temps": 3,
+                  "equipement": 2
+                }
+              }
+            ],
+            "irritants": [],
+            "timer": {
+              "durationMs": 1800000,
+              "remainingMs": 1800000,
+              "deadline": null,
+              "phase": "idle"
+            }
+          },
+          "prevention": {
+            "contexte": "",
+            "theme": "Exemple fictif : action locale de prévention",
+            "notesMission": "",
+            "actors": [],
+            "tools": [
+              {
+                "id": "63a8d8c2-4d2c-4669-8ef5-777193cf062c",
+                "cardId": "joker",
+                "customName": "Support local à préciser · exemple fictif",
+                "notes": {
+                  "fonctionnalite": "Support de sensibilisation proposé par le groupe.",
+                  "contribution": "Proposition fictive : disposer d’un support commun pour une action choisie par la CPTS.",
+                  "objection": "Comment savoir si le support répond au besoin du public ?",
+                  "reponse": "À discuter : le tester avec un petit groupe et recueillir les retours.",
+                  "why": "",
+                  "freins": "",
+                  "irritants": "",
+                  "leviers": "",
+                  "edl": "",
+                  "accord": "",
+                  "desaccord": "",
+                  "question": "Vérifier les supports disponibles et leur adaptation au public.",
+                  "action": "",
+                  "acteurCle": "",
+                  "moment": "",
+                  "canal": "",
+                  "pilote": "",
+                  "echeance": "",
+                  "statut": "",
+                  "source": ""
+                },
+                "ratings": {}
+              }
+            ],
+            "irritants": [],
+            "timer": {
+              "durationMs": 1800000,
+              "remainingMs": 1800000,
+              "deadline": null,
+              "phase": "idle"
+            }
+          }
+        },
+        "pitch": {
+          "arguments": "Exemple fictif : partir d’une mission déjà engagée par la CPTS et choisir un usage qui aide les professionnels dans cette mission.",
+          "phrase": "Choisissons ensemble un premier usage utile à votre mission, puis testons-le avec quelques professionnels.",
+          "ressourcesTexte": "Exemple fictif : fiche du service retenu, scénario de démonstration et contact du référent local.",
+          "confiance": 6,
+          "justification": "Exemple fictif : le besoin est partagé ; les relais et la disponibilité pour un premier test restent à confirmer.",
+          "objections": [
+            {
+              "id": "demo-objection",
+              "objection": "Nous n’avons pas de temps pour un nouvel outil.",
+              "reponse": "Exemple fictif : commencer par une situation déjà connue et un essai limité, avec un accompagnement adapté.",
+              "pointAConfirmer": "Les conditions réelles de mise en œuvre avec la CPTS.",
+              "source": "Contribution fictive de démonstration."
+            }
+          ],
+          "resources": [],
+          "actions": [
+            {
+              "id": "demo-action",
+              "portee": "Recherche de médecin traitant",
+              "acteurCle": "Coordination de la CPTS",
+              "moment": "Réunion de coordination à identifier",
+              "canal": "Prise de contact à convenir",
+              "message": "Proposer de partir d’une difficulté concrète de mise en relation.",
+              "action": "Préparer une courte démonstration à partir du besoin choisi.",
+              "pilote": "À désigner",
+              "echeance": "À convenir",
+              "indicateur": "Un premier usage retenu et un relais identifié."
+            }
+          ],
+          "timer": {
+            "durationMs": 2700000,
+            "remainingMs": 2700000,
+            "deadline": null,
+            "phase": "idle"
+          }
+        }
+      }
+    }
+  ],
+  "prototype": "V9-CPTS-1",
+  "cptsSource": {
+    "name": "Planches ateliers 1 à 4",
+    "missionSlides": [
+      16,
+      17,
+      18
+    ],
+    "pitchSlides": [
+      5,
+      10,
+      15
+    ]
+  }
+}
