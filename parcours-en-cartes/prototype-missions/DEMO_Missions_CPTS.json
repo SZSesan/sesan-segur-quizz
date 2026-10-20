@@ -1,17 +1,17 @@
 {
-  "format": "exco-num-cpts-v1",
+  "format": "exco-num-cpts-v2",
   "version": 9,
-  "packVersion": "1.1-prototype-cpts",
-  "exportedAt": "2026-10-19T06:12:03.861Z",
+  "packVersion": "1.2-atelier",
+  "exportedAt": "2026-10-20T08:21:14.975Z",
   "sourceDate": "05/10/2026",
   "sessions": [
     {
-      "id": "9c2a758a-3fde-41aa-b6ef-4549d10f59ff",
+      "id": "4fc73d41-88fc-47d0-a1ad-cf31b9754fe9",
       "name": "DÉMO FICTIVE · Missions CPTS",
       "department": "Territoire fictif",
       "participants": "Participant fictif 1 (CPAM), Participant fictif 2 (ARS), Participant fictif 3 (SESAN)",
-      "createdAt": "2026-10-19T06:12:03.861Z",
-      "updatedAt": "2026-10-19T06:12:03.861Z",
+      "createdAt": "2026-10-20T08:21:14.974Z",
+      "updatedAt": "2026-10-20T08:21:14.974Z",
       "currentJourney": "monique",
       "parts": {},
       "journeys": {},
@@ -21,7 +21,7 @@
         "deadline": null,
         "phase": "idle"
       },
-      "groupKey": "9c2a758a-3fde-41aa-b6ef-4549d10f59ff",
+      "groupKey": "4fc73d41-88fc-47d0-a1ad-cf31b9754fe9",
       "roster": [
         {
           "id": "demo-cpts-p0",
@@ -53,7 +53,7 @@
       ],
       "registrationCompleted": true,
       "workshop": {
-        "id": "f72aadcf-3d7a-431b-b451-6589abc776e4",
+        "id": "fdf01402-9403-406c-8a6c-a524a1996a17",
         "title": "Démonstration fictive du prototype missions CPTS",
         "date": "",
         "animatorEmail": "",
@@ -79,7 +79,7 @@
             "actors": [],
             "tools": [
               {
-                "id": "3e5f56cb-3afa-4444-aebc-395bd947cdbd",
+                "id": "c48c4aea-4b58-4fd6-8935-10940e7c432f",
                 "cardId": "ressources-cpts",
                 "customName": "",
                 "notes": {
@@ -127,7 +127,7 @@
             "actors": [],
             "tools": [
               {
-                "id": "0b3d21e4-dae7-4b72-83b3-d0a2cd2788b9",
+                "id": "c8dcfe17-7dbe-434c-bcd2-32d0d70c3fca",
                 "cardId": "mss",
                 "customName": "",
                 "notes": {
@@ -175,7 +175,7 @@
             "actors": [],
             "tools": [
               {
-                "id": "63a8d8c2-4d2c-4669-8ef5-777193cf062c",
+                "id": "5e2b3e0b-b563-48dc-a249-9ef2df5bbccd",
                 "cardId": "joker",
                 "customName": "Support local à préciser · exemple fictif",
                 "notes": {
@@ -252,9 +252,9 @@
       }
     }
   ],
-  "prototype": "V9-CPTS-1",
+  "prototype": "V9-CPTS-2",
   "cptsSource": {
-    "name": "Planches ateliers 1 à 4",
+    "name": "Supports ateliers du 20 octobre",
     "missionSlides": [
       16,
       17,

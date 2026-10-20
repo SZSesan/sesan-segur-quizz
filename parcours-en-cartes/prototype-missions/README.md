@@ -1,41 +1,40 @@
-# Parcours et missions CPTS · Prototype V9 enrichi
+# Atelier participatif parcours patients et missions CPTS
 
-Ce prototype ajoute l’atelier territorial et la fiche de discours CPTS avant la refonte du pack global.
+Journée régionale exercice coordonné – numérique en santé.
 
-## Accès
+## Version du 20 octobre 2026
 
-Ouvrir `index.html`, puis choisir l’atelier et inscrire le groupe. L’espace animateur est dans `Animateur_CPTS.html`.
+L’accueil et le bandeau reprennent l’intitulé de la journée et les logos ARS Île-de-France, SESAN et Assurance Maladie fournis par l’organisateur.
 
-Les deux fichiers HTML autonomes fournis dans la conversation fonctionnent hors connexion. Les pages du site chargent les mêmes plateaux à partir de ressources conservées dans le sous-dossier base ; elles nécessitent une connexion pour le chargement initial.
+Les ateliers parcours conservent leurs situations et étapes. Les actions principales sont « Outils » et « Questions / objections ». Les personnages restent disponibles dans le détail de l’étape et dans la discussion, sans conditionner la progression. Au moins deux irritants par frise restent demandés. La synthèse donne accès à l’annexe des échanges, alimentée par les saisies des étapes et des cartes.
 
-## Contenu repris des planches
+L’atelier missions propose une à trois planches selon le temps et la matière, avec un compteur de trente minutes par planche. La fiche de discours CPTS se construit au fil des missions choisies. Pour les ateliers parcours, la séquence de discours conserve ses quarante-cinq minutes.
 
-- Les trois frises patient de la V9 restent disponibles.
-- La fiche « Quel discours auprès des CPTS ? » reprend les arguments, les objections et réponses, la phrase pour convaincre, les ressources et la confiance sur dix avec justification.
-- L’atelier territorial reprend la recherche de médecin traitant, les soins non programmés de ville et la prévention. Chaque mission conserve les trois colonnes de la planche : solution / fonctionnalité, utilité pour la mission, questions / objections et réponses.
-- Plusieurs cartes, usages précis et jokers peuvent être choisis. Les fiches et logos du kit sont conservés.
-- Les notes des services portent sur la pertinence, la facilité d’usage, le gain de temps et la difficulté d’équipement. Pour cette dernière dimension, cinq signifie une difficulté élevée. Le baromètre de confiance, distinct, va de zéro à dix et reste vide tant que le groupe ne l’a pas évalué.
+## Comprendre les services
 
-Les trois missions durent trente minutes chacune. La fiche de discours se renseigne pendant ces séquences. Pour les ateliers parcours, la planche de discours correspond à la séquence séparée de quarante-cinq minutes du support.
+« Découvrir les outils » présente quatorze fiches courtes avec pictogrammes, logos et rubriques communes : utilité, publics, fonctionnalités, exemple, bénéfice, conditions, premier pas et sources. Chaque fiche peut être téléchargée en HTML puis imprimée ou enregistrée en PDF depuis le navigateur. La carte joker reste à décrire par le groupe. La fiche DMP comporte des liens officiels vérifiés ; les modalités locales et les conditions propres aux équipements sont à préciser avec l’équipe.
 
-Les acteurs à embarquer, la démarche d’aller-vers et les pistes de discussion sont des compléments proposés pour l’animation. Les réponses et les notes ne sont pas préremplies.
+Les étoiles restent des évaluations du groupe. Elles ne sont pas préremplies dans les fiches.
 
-## Enregistrement et restitution
+## Aides animateur
 
-Les saisies sont enregistrées dans le navigateur. Exporter le JSON pour conserver et transmettre le travail du groupe. Il n’y a pas de synchronisation automatique entre appareils. Le courriel préparé nécessite de joindre le fichier manuellement.
+L’espace animateur propose les pistes par parcours, les questions de relance et les exemples de réponse aux irritants. Ces aides n’alimentent jamais automatiquement les réponses des participants. Les compléments à l’ébauche fournie et les points à valider sont identifiés.
 
-Les essais sont enregistrés dans un espace distinct de la V9 actuelle. Le prototype importe les anciennes sauvegardes V9 et conserve leurs parcours. Les nouveaux fichiers sont destinés à l’espace animateur de ce prototype, afin de préserver les rubriques CPTS.
+Les cartes I1 et I10 suivent les nouveaux libellés : consultation du DMP depuis le Web, et « J’alimente déjà Doctolib ». Les anciennes cartes restent reconnues dans les sauvegardes pour conserver le sens des réponses historiques.
 
-La consolidation intègre les missions, le discours CPTS, les notes et leurs groupes d’origine. Le JSON, le CSV, les comptes rendus HTML et la génération de PowerPoint utilisent les saisies enregistrées. Le fichier de démarrage d’une table conserve les inscriptions et affectations, sans les réponses de l’atelier.
+## Sauvegarde et restitution
 
-## Exemple fictif
+Les réponses sont enregistrées dans le navigateur. Le groupe exporte le JSON et le transmet manuellement à l’animateur, qui l’importe pour consolider les contributions et générer les restitutions. Il n’y a pas de synchronisation automatique entre appareils.
 
-`DEMO_Missions_CPTS.json` contient une table de démonstration avec des participants et des échanges fictifs. L’importer dans le jeu ou dans l’espace animateur. Les exemples servent à tester le fonctionnement et à discuter les usages, sans constituer un corrigé validé.
+Le nouveau format JSON est `exco-num-cpts-v2`. Cette version importe aussi les fichiers du prototype précédent (`exco-num-cpts-v1`) et ceux de la V9. Les nouvelles sauvegardes doivent être ouvertes dans cet espace animateur actualisé.
 
-## Sources
+Les fichiers HTML autonomes fournis dans la conversation fonctionnent hors connexion. Les pages hébergées reconstruisent ces mêmes plateaux à partir des ressources du dossier `base`, avec contrôle d’intégrité avant ouverture. Elles nécessitent une connexion pour leur chargement initial.
 
-Support fourni « Planches ateliers 1 à 4 », dix-huit diapositives : les missions sont reprises des diapositives 16 à 18, la fiche de discours des diapositives 5, 10 et 15. Les parcours, les fiches outils et les visuels proviennent du pack V9 existant. Le guide Word et le diaporama global ne sont pas refaits à ce stade.
+## Supports intégrés
 
-## Vérifications
+- Planches ateliers 1 à 4, version transmise le 20 octobre.
+- Cartes et consignes, avec les nouveaux irritants.
+- Fiche animateur « quels outils » et fiche « réponses aux irritants ».
+- Infographie DMP fournie comme référence de composition, avec une fiche participant recentrée sur l’usage et les sources officielles.
 
-La chaîne de saisie, de sauvegarde, d’import et d’export a été vérifiée pour les missions et pour le parcours patient. Les compteurs de trente et quarante-cinq minutes, les notes manquantes et la valeur zéro du baromètre sont distingués. Le rendu dans un navigateur n’a pas fait l’objet d’un contrôle visuel automatisé dans cet environnement.
+Le pack global Word et PowerPoint reste distinct de cette version de test.
